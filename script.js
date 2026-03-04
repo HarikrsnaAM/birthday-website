@@ -21,25 +21,42 @@
   setTimeout(typeNextChar, initialDelay);
 })();
 
-// Memories: tap to show caption
+// Memories: tap to enlarge in lightbox
 (function setupMemories() {
   const cards = document.querySelectorAll(".memory-card");
-  if (!cards.length) return;
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-image");
+  if (!cards.length || !lightbox || !lightboxImg) return;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "Memory photo";
+    lightbox.classList.add("visible");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("visible");
+  }
 
   cards.forEach((card) => {
-    const captionText = card.getAttribute("data-caption") || "";
-    const figcaption = card.querySelector("figcaption");
-    if (figcaption) {
-      figcaption.textContent = captionText;
-    }
-
+    const img = card.querySelector("img");
+    if (!img) return;
     card.addEventListener("click", () => {
-      const isActive = card.classList.contains("show-caption");
-      document.querySelectorAll(".memory-card.show-caption").forEach((c) => {
-        if (c !== card) c.classList.remove("show-caption");
-      });
-      card.classList.toggle("show-caption", !isActive);
+      openLightbox(img.src, img.alt);
     });
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    // Close when clicking outside the inner image container
+    if (event.target === lightbox || event.target.classList.contains("lightbox-backdrop")) {
+      closeLightbox();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
   });
 })();
 
