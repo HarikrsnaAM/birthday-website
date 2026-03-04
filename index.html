@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday, My Love ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A little corner of the internet, just for you." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Optional simple passcode overlay (leave commented out if not needed)
+  <div id="passcode-overlay">
+    <div class="passcode-card">
+      <h2>Hi love 💗</h2>
+      <p>Just a tiny secret word only you know.</p>
+      <input type="password" id="passcode-input" placeholder="Our secret word" />
+      <button id="passcode-submit">Enter</button>
+      <p id="passcode-error"></p>
+    </div>
+  </div>
+  -->
+
+  <div class="background-gradient"></div>
+
+  <!-- Floating hearts background decoration -->
+  <div class="floating-hearts">
+    <span class="heart heart-1">♥</span>
+    <span class="heart heart-2">♥</span>
+    <span class="heart heart-3">♥</span>
+    <span class="heart heart-4">♥</span>
+  </div>
+
+  <!-- Music control (audio starts only after user taps button) -->
+  <button id="music-toggle" aria-label="Toggle background music">
+    ♫ Play song
+  </button>
+  <audio id="bg-music" preload="auto">
+    <!-- Replace with your own file under ./assets/music/ -->
+    <source src="./assets/music/your-song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Main content wrapper -->
+  <main>
+
+    <!-- 1️⃣ Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-content">
+        <p class="hero-kicker">For my favorite person</p>
+        <h1>Happy Birthday ❤️</h1>
+        <p class="hero-subtitle">
+          This little corner of the internet is just for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2️⃣ Love Letter Section -->
+    <section id="letter" class="section letter-section reveal-on-scroll">
+      <div class="section-label">A little letter</div>
+      <h2>From me, to you</h2>
+      <div class="letter-wrapper">
+        <p id="letter-text" class="letter-text"></p>
+        <span class="typing-cursor" aria-hidden="true"></span>
+      </div>
+
+      <!-- Editable text source for typewriter (change this freely) -->
+      <script id="letter-source" type="text/plain">
+Happy birthday, my love. 💌
+
+It still makes me smile that we met through Bumble—
+one little swipe that quietly changed everything.
+
+From our very first date on the second day,
+it felt like we’d skipped the awkward part and gone
+straight to the “this just feels right” part.
+We clicked from the moment we met,
+like my heart had been waiting to recognize you.
+
+Thank you for choosing me in all the ordinary days,
+and for making the quiet moments feel like home.
+
+Today is about you, but secretly I’m celebrating too,
+because the day you were born is one of my favorite miracles.
+
+I love you. More than these words, more than this page,
+in ways I’m still discovering every day.
+      </script>
+    </section>
+
+    <!-- 3️⃣ Our Memories Section -->
+    <section id="memories" class="section memories-section reveal-on-scroll">
+      <div class="section-label">Our little universe</div>
+      <h2>Some of our favorite memories</h2>
+      <p class="section-intro">
+        Tap a photo to see the caption.
+      </p>
+
+      <div class="memory-grid">
+        <!-- Replace src paths + captions with your own images/text -->
+        <figure class="memory-card" data-caption="The day we matched on Bumble, not knowing how much it would mean later.">
+          <img src="./assets/images/memory-1.jpg" alt="Bumble match" loading="lazy" />
+          <figcaption></figcaption>
+        </figure>
+
+        <figure class="memory-card" data-caption="Our second-day first date — the moment it just clicked and I knew I wanted more days like that with you.">
+          <img src="./assets/images/memory-2.jpg" alt="Our first date" loading="lazy" />
+          <figcaption></figcaption>
+        </figure>
+
+        <figure class="memory-card" data-caption="A quiet moment that felt louder than words — just you, me, and the feeling of home.">
+          <img src="./assets/images/memory-3.jpg" alt="Cozy moment" loading="lazy" />
+          <figcaption></figcaption>
+        </figure>
+
+        <figure class="memory-card" data-caption="Your laugh in real life beats every photo, but I still love this one.">
+          <img src="./assets/images/memory-4.jpg" alt="Laughing together" loading="lazy" />
+          <figcaption></figcaption>
+        </figure>
+
+        <figure class="memory-card" data-caption="A day that was supposed to be ordinary, but became one of my favorite memories.">
+          <img src="./assets/images/memory-5.jpg" alt="Ordinary magic" loading="lazy" />
+          <figcaption></figcaption>
+        </figure>
+
+        <figure class="memory-card" data-caption="Us, just existing together — no plans, no rush, just you and me.">
+          <img src="./assets/images/memory-6.jpg" alt="Just us" loading="lazy" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4️⃣ Timeline Section -->
+    <section id="timeline" class="section timeline-section reveal-on-scroll">
+      <div class="section-label">Our story so far</div>
+      <h2>Little milestones</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>When we matched on Bumble</h3>
+            <p>
+              One tiny swipe, one tiny “it’s a match” — and somehow the whole direction of my life shifted a little toward you.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Our second‑day first date</h3>
+            <p>
+              We met so soon after matching, and from that very first date it felt easy, warm, and familiar — like we were picking up a story already in progress.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>When it just “clicked”</h3>
+            <p>
+              That moment I realized I didn’t feel nervous around you anymore — just safe, seen, and weirdly at home for someone I’d just met.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-heart"></div>
+          <div class="timeline-content">
+            <h3>Today ❤️</h3>
+            <p>
+              Another year of you, and I still can’t believe that a Bumble match and a second‑day date led me to someone this special.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5️⃣ Final Surprise Section -->
+    <section id="final" class="section final-section reveal-on-scroll">
+      <div class="section-label">One last thing</div>
+      <h2>Before you go…</h2>
+
+      <p class="final-lead">
+        There’s something I’ve been meaning to say out loud.
+      </p>
+
+      <button id="final-button" class="primary-button">
+        One last thing ❤️
+      </button>
+
+      <div id="final-surprise" class="final-surprise">
+        <p class="final-message">
+          If I could wrap a feeling and give it to you, it would be the way my heart feels when you smile.
+          <br /><br />
+          Thank you for being you. For all that you are, and all that you are becoming.
+          <br /><br />
+          I’m so, so proud to love you.
+        </p>
+        <!-- Optional special photo -->
+        <!-- <img src="./assets/images/final-photo.jpg" alt="A special photo of us" /> -->
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
